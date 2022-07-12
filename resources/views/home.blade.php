@@ -23,47 +23,14 @@
 <div class="container-fluid">
     <h2 class="text-center fw-bold">Katalog Kami</h2>
     <section class="catalog-card-list">
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
-        
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
-        
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
-
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
-        
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
-        
-        <a href="#" class="catalog-card shadow text-decoration-none">
-            <header class="catalog-card-header">
-                <p>14 Juni 2022</p>
-                <h2>Card Tricks, Fanny Maulana Rizky</h2>
-            </header>
-        </a>
+        @foreach ($books as $book)
+            <a href="#" class="catalog-card shadow text-decoration-none">
+                <header class="catalog-card-header">
+                    <p>{{ $book->pengarang }}</p>
+                    <h2>{{ $book->judul }}</h2>
+                </header>
+            </a>
+        @endforeach
     </section>
 </div>
 @endsection
