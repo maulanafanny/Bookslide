@@ -14,7 +14,7 @@
                     Online Bookstore termurah dan terlengkap di Indonesia.
                     Kami menyediakan buku yang terbaik hanya untuk Anda.
                 </p>
-                <a href="#catalog" class="btn btn-grd px-4 py-2 mt-3">
+                <a href="#catalog" class="btn btn-grd px-4 py-2 mt-3 shadow-sm">
                     Katalog Kami
                 </a>
             </div>
