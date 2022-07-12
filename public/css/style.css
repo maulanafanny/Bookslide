@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Mono', monospace;
+}
+
+.catalog-card-list {
+    display: flex;
+    padding: 2.5rem 3rem;
+    overflow-x: hidden;
+}
+
+.catalog-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+
+    transition: .4s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-2rem);
+    color: black;
+}
+
+.catalog-card:hover h2 {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.catalog-card:hover~.catalog-card {
+    transform: translateX(6rem);
+}
+
+/* select element selain first element */
+.catalog-card:not(:first-child) {
+    margin-left: -130px;
+}
