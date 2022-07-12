@@ -1,9 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero {
+    background-image: linear-gradient(to right top, #009efa, #0086ff, #006cff, #004bfa, #3712eb);
+    height: 900px;
+    margin-top: -380px;
+    margin-bottom: 200px;
+    transform: skew(0deg, -10deg);
+}
+
+.hero-text {
+    padding-top: 445px;
+    color: white;
+    z-index: 100;
+    transform: skew(0deg, 10deg);
+}
+
+.btn-grd {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.hero-text-small {
+    color: white;
+    opacity: 75%;
+    font-size: 1.1rem;
 }
 
 .catalog-card-list {
@@ -17,7 +46,7 @@ body {
     position: relative;
     flex-direction: column;
 
-    height: 350px;
+    height: 454px;
     width: 400px;
     min-width: 250px;
     padding: 1.5rem;
@@ -32,6 +61,14 @@ body {
 .catalog-card:hover {
     transform: translateY(-2rem);
     color: black;
+    height: 495px;
+    margin-bottom: -41px;
+}
+
+.catalog-card h2 {
+    font-size: 1.35rem;
+    transition: 0.4s;
+    font-weight: 700;
 }
 
 .catalog-card:hover h2 {
@@ -40,6 +77,7 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    font-size: 1.8rem;
 }
 
 .catalog-card:hover~.catalog-card {
