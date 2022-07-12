@@ -86,13 +86,13 @@ body {
 .catalog-card:hover {
     transform: translateY(-2rem);
     color: black;
-    height: 495px;
+    height: 100%;
     margin-bottom: -41px;
 }
 
 .catalog-card h2 {
     font-size: 1.35rem;
-    transition: 0.4s;
+    transition: .4s;
     font-weight: 700;
 }
 
