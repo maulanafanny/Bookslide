@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->string('genre');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('cover');
             $table->integer('harga');
         });

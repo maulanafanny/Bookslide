@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="hero">
     <div class="container hero-text">
         <div class="row">
@@ -29,7 +30,7 @@
     <h1 class="text-center fw-bold">Katalog Kami</h2>
     <section class="catalog-card-list">
         @foreach ($books as $book)
-            <a href="#" class="catalog-card shadow text-decoration-none">
+            <a href="/product/{{ $book->id }}" class="catalog-card shadow text-decoration-none">
                 <header class="catalog-card-header"  style="overflow: hidden">
                     <div class="mx-auto text-center">
                         <img src="{{ $book->cover }}" class="img-fluid p-3" style="height: 350px">
@@ -41,4 +42,5 @@
         @endforeach
     </section>
 </div>
+
 @endsection

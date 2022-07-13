@@ -36,7 +36,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item btn btn-outline-light btn-nav me-3" id="btn-nav">
-                            <a href="#" class="nav-link">Produk</a>
+                            <a href="/product" class="nav-link">Produk</a>
                         </li>
                         <li class="nav-item btn btn-outline-light btn-nav me-5" id="btn-nav">
                             <a href="#" class="nav-link">Dashboard</a>
