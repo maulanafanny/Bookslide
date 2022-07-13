@@ -10,14 +10,16 @@ class BookController extends Controller
     function show($id)
     {
         return view('product', [
-            'book' => Book::find($id)
+            'book' => Book::find($id),
+            'route' => Book::find($id)->judul
         ]);
     }
 
     function product()
     {
         return view('products', [
-            'books' => Book::all()
+            'books' => Book::all(),
+            'route' => 'Produk'
         ]);
     }
 }

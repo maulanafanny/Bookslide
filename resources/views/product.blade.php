@@ -11,7 +11,7 @@
 
 <div class="container-fluid mb-5 breadcrumbs">
     <div class="container pl-1">
-        <h3 class="mb-0 py-5"><strong>List Produk</strong></h3>
+        <h3 class="mb-0 py-5"><strong>{{ Breadcrumbs::render('product', $book) }}</strong></h3>
     </div>
 </div>
 

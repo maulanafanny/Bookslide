@@ -2,7 +2,7 @@
 
 :root {
     --gradient: linear-gradient(90deg,#ff8a00,#e52e71);
-    --herogradient: linear-gradient(to right top, #009efa, #0086ff, #006cff, #004bfa, #3712eb);
+    --herogradient: linear-gradient(to right top, #07e3b3, #00d2d9, #00bbfd, #009fff, #0078ff, #0562ff, #3945ff, #6100ff, #8000ff, #9900ff, #af00ff, #c300ff);
 }
 
 body {
@@ -192,4 +192,8 @@ body {
 .breadcrumbs {
     background-image: var(--gradient);
     margin-top: -25px
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+    margin-top: 4px;
 }

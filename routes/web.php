@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        'books' => Book::all()
+        'books' => Book::all(),
+        'route' => 'Home'
     ]);
 });
 

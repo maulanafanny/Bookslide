@@ -5,3 +5,12 @@ $body-bg: #f8fafc;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Breadcrumbs
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding-x:         .5rem;
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-divider-color:          black;
+$breadcrumb-active-color:           #5e3f3fb3;
+$breadcrumb-divider:                url('/public/img/arrow-right-short.svg');;
