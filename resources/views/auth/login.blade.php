@@ -4,7 +4,7 @@
 <script>
     $(document).ready(function () {
         $("nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
-        $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-dark");
+        $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary");
     });
 </script>
 <br>
