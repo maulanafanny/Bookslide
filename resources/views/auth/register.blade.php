@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+<script>
+    $(document).ready(function () {
+        $("nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
+    });
+</script>
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card shadow-lg">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">

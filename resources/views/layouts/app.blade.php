@@ -11,11 +11,7 @@
 
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -39,6 +35,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item btn btn-outline-light btn-nav me-3" id="btn-nav">
+                            <a href="#" class="nav-link">Produk</a>
+                        </li>
+                        <li class="nav-item btn btn-outline-light btn-nav me-5" id="btn-nav">
+                            <a href="#" class="nav-link">Dashboard</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

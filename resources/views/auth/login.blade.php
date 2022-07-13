@@ -1,10 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<script>
+    $(document).ready(function () {
+        $("nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
+        $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-dark");
+    });
+</script>
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card shadow-lg">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
