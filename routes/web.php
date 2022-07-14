@@ -3,6 +3,7 @@
 use App\Models\Book;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +32,10 @@ Route::get('/product/{products}', [App\Http\Controllers\BookController::class, '
 
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-Route::get('/dashboard/book', function (Book $books) {
+Route::get('/dashboard/books', function (Book $books) {
     return view('dashboard.book', [
         'books' => $books->all()
     ]);
 })->name('dashboard-book');
+
+Route::resource('/dashboard/book', BookController::class);

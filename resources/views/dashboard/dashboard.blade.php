@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'dashboard/book' ? 'active' : '' }}" href="/dashboard/book">
+                    <a class="nav-link {{ Request::path() == 'dashboard/books' ? 'active' : '' }}" href="/dashboard/books">
                         <i class="bi bi-book fs-5" style="vertical-align: middle;"></i>
                         <span class="ms-2">Buku</span>
                     </a>

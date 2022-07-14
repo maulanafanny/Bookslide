@@ -34,19 +34,21 @@
                 <td>{{ $book->pengarang }}</td>
                 <td>{{ $book->penerbit }}</td>
                 <td>{{ $book->genre }}</td>
-                <td>{{ $book->harga }}</td>
+                <td>{{ number_format($book->harga) }}</td>
                 <td class="text-center">
-                    {{-- <a href="/dashboard/book/{{ $book->id }}" class="btn btn-sm btn-primary">
-                        <span data-feather="eye"></span>
+                    <a href="/dashboard/book/{{ $book->id }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-eye"></i>
                     </a>
                     <a href="/dashboard/book" class="btn btn-sm btn-warning">
-                        <span data-feather="edit-2"></span>
+                        <i class="bi bi-pen"></i>
                     </a>
                     <form class="d-inline" action="{{ route('book.destroy', $book->id) }}" method="POST">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button class="btn btn-sm btn-danger m-1" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><span data-feather="trash-2"></span></button>
-                    </form> --}}
+                        <button class="btn btn-sm btn-danger m-1" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach

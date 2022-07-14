@@ -37,27 +37,28 @@
         <div class="col-3 me-5">
             <h3 class="fw-semibold mb-4"><i class="bi bi-truck me-3 fs-3"></i>Pengiriman Gratis</h3>
             <p class="hero-text-small" style="color: black">
-                Bookslide menawarkan pengiriman gratis ke seluruh dunia, 
-                yang memungkinkan Anda untuk membeli buku dari kami 
-                meskipun Anda tinggal jauh dari kantor pusat kami. 
+                Bookslide menawarkan pengiriman gratis ke seluruh wilayah
+                Indonesia, yang memungkinkan Anda untuk membeli buku dari 
+                kami meskipun Anda tinggal jauh dari kantor pusat kami. 
                 Proses pengiriman cepat dan aman.
             </p>
         </div>
         <div class="col-3 me-5">
             <h3 class="fw-semibold mb-4"><i class="bi bi-tags me-3 fs-3"></i>Diskon & Promo</h3>
             <p class="hero-text-small" style="color: black">
+                Dapatkan penawaran menarik dan promo terbatas dari kami.
                 Klien reguler Bookslide mendapat keuntungan dari potongan
                 harga beli buku dan diskon untuk buku baru dari katalog kami, 
                 yang diperbarui setiap hari.
             </p>
         </div>
         <div class="col-3 me-5">
-            <h3 class="fw-semibold mb-4"><i class="bi bi-truck me-3 fs-3"></i>Pengiriman Gratis</h3>
+            <h3 class="fw-semibold mb-4"><i class="bi bi-patch-check me-3 fs-3"></i></i>Kepuasan Terjamin</h3>
             <p class="hero-text-small" style="color: black">
-                Bookslide menawarkan pengiriman gratis ke seluruh dunia, 
-                yang memungkinkan Anda untuk menyewa buku dari kami 
-                meskipun Anda tinggal jauh dari kantor pusat kami. 
-                Proses pengiriman cepat dan aman.
+                Kami berharap Anda menyukai layanan pembelian buku kami. Tim 
+                kami berusaha semaksimal mungkin untuk menawarkan kepada Anda 
+                pengalaman pembelian buku yang mudah dan menyenangkan kapan saja 
+                sepanjang tahun.
             </p>
         </div>
     </div>
