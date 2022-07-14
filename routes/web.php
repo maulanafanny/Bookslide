@@ -31,3 +31,8 @@ Route::get('/product/{products}', [App\Http\Controllers\BookController::class, '
 
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/book', function (Book $books) {
+    return view('dashboard.book', [
+        'books' => $books->all()
+    ]);
+})->name('dashboard-book');
