@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/product', [App\Http\Controllers\BookController::class, 'product'])->name('product');
-Route::get('/product/{products}', [App\Http\Controllers\BookController::class, 'show'])->name('show');
+Route::get('/product/{products}', [App\Http\Controllers\BookController::class, 'single'])->name('single-product');
 
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
