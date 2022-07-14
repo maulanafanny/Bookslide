@@ -3,14 +3,14 @@
 @section('content')
 <script>
     $(document).ready(function () {
-        $("nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
+        $(".main-nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
         $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary");
         $('#logo-brand').attr('src', '{{ asset("img/logo-dark.png") }}');
     });
 </script>
 <br>
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container" style="height: 500px;">
+    <div class="row justify-content-center auth-card">
         <div class="col-md-8">
             <div class="card shadow-lg">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -78,4 +78,5 @@
         </div>
     </div>
 </div>
+<br>
 @endsection

@@ -3,7 +3,7 @@
 @section('content')
 <script>
     $(document).ready(function () {
-        $("nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
+        $(".main-nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
         $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary");
         $('#logo-brand').attr('src', '{{ asset("img/logo-dark.png") }}');
     });

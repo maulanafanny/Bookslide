@@ -18,7 +18,7 @@ class BookController extends Controller
     function product()
     {
         return view('products', [
-            'books' => Book::all(),
+            'books' => Book::paginate(4),
             'route' => 'Produk'
         ]);
     }
