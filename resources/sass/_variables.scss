@@ -2,7 +2,7 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -13,4 +13,135 @@ $breadcrumb-item-padding-x:         .5rem;
 $breadcrumb-margin-bottom:          0;
 $breadcrumb-divider-color:          black;
 $breadcrumb-active-color:           #5e3f3fb3;
-$breadcrumb-divider:                url('/public/img/arrow-right-short.svg');;
+$breadcrumb-divider:                url('/public/img/arrow-right-short.svg');
+
+
+//=========== Common style  ==============//
+
+body{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  //main common style
+  .dash.active{
+      margin-left: 0px !important;
+  }
+  .dash{
+      margin-left: 250px;
+      transition: margin 0.5s;
+      min-height: 100vh;
+  }
+  
+  //=========== header navbar ==============//
+  
+  #header-navbar{
+      //aside toggle
+      #aside-toggle-btn{
+          color: #293042;
+          cursor: pointer;
+      } 
+      //user dropdown
+      .user-dropdown{
+          .dropdown-menu{
+              right:0 !important;
+              left: auto !important;
+          }
+      }     
+  }
+  
+  //=========== aside nav ==============//
+  
+  //aside nav active class toggle on click
+  #aside-nav.active{
+      width: 0px !important;    
+  }
+  
+  //aside nav
+  #aside-nav{
+      overflow-y: auto;
+      position:fixed;
+      top: 0;
+      bottom: 0;
+      background-color: #293042;
+      width: 250px;    
+      transition:width 0.5s;    
+      height: 100vh;  
+      overflow-x:hidden;
+      
+      .nav-link{
+          font-size: .825rem;
+          padding: .725rem 1.625rem;
+          color: white;
+          white-space:nowrap;
+          letter-spacing: 0.3px;
+          svg{    
+              height: 20px;
+              width: 20px;
+          }
+      }  
+      
+      .aside-brand{        
+          padding: 1.15rem 1.725rem;
+          display: block;        
+          color: #fff;
+          fill: #fff;
+          cursor: pointer;
+          white-space:nowrap;
+          svg{    
+              height: 20px;
+              width: 20px;
+          }
+      }
+  
+      .active{
+          background-color:#f8f9fa; // bg light
+          color: #293042;  // aside bg
+          font-weight: 500;
+          box-shadow: 0 0.125rem 0.25rem rgba(0,0, 0,0.8);
+      }
+  
+      .dropdown-caret-svg{
+          svg{
+              position:absolute;
+              right:20px;
+          }
+      }
+      
+      .dropdown-caret-svg.rotate-svg svg{
+          transform:rotate(90deg);
+      }
+  
+      .aside-dropdown-menu a{
+          padding-left: 58px;
+      }
+  
+      .aside-badge{        
+          background: #DB2777;
+          padding: 0px 7px;
+          border-radius: 10px;
+          color: white !important;
+      }
+      
+  }
+  
+  //=========== responsive media  ==============//
+  @media(min-width:300px) and (max-width:1023.98px){    
+      .dash{
+          margin-left: 0px !important;
+      }  
+      #aside-nav{
+          top: 63px !important;
+      }
+      .dash{
+          overflow: hidden;
+      }
+  
+      //responsive left nav on mobile
+      #header-navbar{
+          position:fixed !important;        
+      }
+      
+      #main{
+          margin-top: 60px !important;
+      }
+  }

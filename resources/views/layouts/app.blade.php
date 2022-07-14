@@ -44,7 +44,7 @@
                             <a href="/product" class="nav-link">Produk</a>
                         </li>
                         <li class="nav-item btn btn-outline-light btn-nav me-5" id="btn-nav">
-                            <a href="#" class="nav-link">Dashboard</a>
+                            <a href="/dashboard" class="nav-link">Dashboard</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest
@@ -205,7 +205,6 @@
         </div>
         <!-- End of Footer Links -->
 
-        <br>
         <br>
 
         <div class="footer-copyright text-center py-4"
