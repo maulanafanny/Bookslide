@@ -221,3 +221,12 @@ body {
 .footer-text {
     font-size: medium;
 }
+
+.alert {
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: -57px;
+    width: 50%;
+}

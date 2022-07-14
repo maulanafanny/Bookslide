@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     @vite(['resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
@@ -14,7 +15,7 @@
     <!-- === wrapper section === -->
     <section id="wrapper" class="d-flex w-100">
         <!-- aside nav-->
-        <aside class="border-right shadow-sm" id="aside-nav">
+        <aside class="border-right shadow-sm" id="aside-nav" style="z-index: 5000">
             <!-- aside logo brand -->
             <a href="#" class="aside-brand text-decoration-none border-bottom mb-3">
                 <i class="bi bi-stack fs-4" style="vertical-align: middle;"></i>
@@ -63,7 +64,7 @@
                                 <li class="nav-item dropdown user-dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span>Fanny Maulana</span>
+                                        <span>{{ Auth::user()->name }}</span>
                                     </a>
                                     <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdownMenuLink">
                                         <li><a class="dropdown-item" href="/home">Home</a></li>
@@ -87,7 +88,7 @@
             <!-- === /header === -->
 
             <!-- === main body section start === -->
-
+            
             @yield('content')
 
             <!-- === footer === -->

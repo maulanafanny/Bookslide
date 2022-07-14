@@ -15,4 +15,8 @@ class Book extends Model
      * @var string
      */
     protected $table = 'book';
+
+    public $timestamps = false;
+
+    protected $fillable = ['judul','pengarang','penerbit','genre','deskripsi','cover','harga'];
 }

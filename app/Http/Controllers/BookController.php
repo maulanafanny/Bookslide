@@ -24,7 +24,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.bookcreate');
     }
 
     /**
@@ -35,7 +35,18 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'judul' => 'required',
+            'pengarang' => 'required',
+            'penerbit' => 'required',
+            'genre' => 'required',
+            'deskripsi' => 'required',
+            'cover' => 'required',
+            'harga' => 'required'
+        ]);
+
+        Book::create($validatedData);
+        return redirect('/dashboard/books')->with('success', 'Berhasil menambahkan data buku baru!');
     }
 
     /**
@@ -59,7 +70,9 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.bookedit', [
+            'book' => Book::find($id)
+        ]);
     }
 
     /**
@@ -71,7 +84,19 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'judul' => 'required',
+            'pengarang' => 'required',
+            'penerbit' => 'required',
+            'genre' => 'required',
+            'deskripsi' => 'required',
+            'cover' => 'required',
+            'harga' => 'required'
+        ]);
+
+        Book::where('id', $id)->update($validatedData);
+
+        return redirect('/dashboard/books')->with('success', 'Berhasil mengubah data buku!');
     }
 
     /**
@@ -82,7 +107,8 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Book::destroy($id);
+        return redirect('/dashboard/books')->with('success', 'Berhasil menghapus data buku!');
     }
     
     function product()
