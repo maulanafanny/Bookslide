@@ -1,6 +1,7 @@
 @extends('dashboard.dashboard')
 
 @section('content')
+
 <section class="container-fluid">
     <br>
     <h2>Halaman Admin Bookslide</h2>
@@ -11,7 +12,7 @@
                 <div class="card-body p-4">
                     <i class="bi bi-journals dashboard-card-icons bg-danger shadow-sm"></i>
                     <h2>Jumlah Buku</h2>
-                    <h1 class="m-0 counter" style="font-size: 60px">{{ $books }}</h1>
+                    <h1 class="m-0 counter" style="font-size: 60px" id="books">{{ $books }}</h1>
                 </div>
             </div>
         </div>
@@ -20,7 +21,7 @@
                 <div class="card-body p-4">
                     <i class="bi bi-person dashboard-card-icons bg-secondary shadow-sm"></i>
                     <h2>Jumlah User</h2>
-                    <h1 class="m-0 counter" style="font-size: 60px">{{ $users }}</h1>
+                    <h1 class="m-0 counter" style="font-size: 60px" id="users">{{ $users }}</h1>
                 </div>
             </div>
         </div>
@@ -29,19 +30,24 @@
                 <div class="card-body p-4">
                     <i class="bi bi-currency-exchange dashboard-card-icons bg-primary shadow-sm"></i>
                     <h2>Transaksi</h2>
-                    <h1 class="m-0 counter" style="font-size: 60px">35</h1>
+                    <h1 class="m-0 counter" style="font-size: 60px" id="transactions">35</h1>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-lg-3 col-md-6 mt-4">
-            <div class="card shadow">
-                <div class="card-body p-4" style="background-image: linear-gradient(to right top, #90d6b6, #75c29d, #59ae84, #3c9a6c, #198754);">
+            <div class="card shadow" style="background-image: linear-gradient(to right top, #90d6b6, #75c29d, #59ae84, #3c9a6c, #198754);">
+                <div class="card-body p-4">
                     <i class="bi bi-check-circle dashboard-card-icons bg-success shadow-sm"></i>
                     <h2>Total Terjual</h2>
-                    <h1 class="m-0 counter" style="font-size: 60px">200</h1>
+                    <h1 class="m-0 counter" style="font-size: 60px" id="sold">200</h1>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="container m-5 mx-auto" style="width: 95%">
+    <canvas id="dashChart"></canvas>
+</div>
+
 @endsection
