@@ -17,12 +17,26 @@ $(document).ready(function(){
     });
 
     //click on one dropdown second one automatically hide and change svg icon to
-     $("#aside-nav-ul").on('click','.nav-item',function(){      
+    $("#aside-nav-ul").on('click','.nav-item',function(){      
         const liElement = $(this);
         liElement.siblings().children().children(".dropdown-caret-svg").removeClass("rotate-svg");
         liElement.siblings().children(".aside-dropdown-menu").removeClass("show");
         if($(this).hasClass("active")){
-        liElement.siblings().children(".aside-dropdown-menu").addClass("show");
+            liElement.siblings().children(".aside-dropdown-menu").addClass("show");
         }
-        });
+    });
+    
+    // counter for dashboard stat cards
+    const counter = document.querySelectorAll('.counter');
+    counter.forEach(function (counter) {
+        let count = setInterval(updated);
+        let init = 0;
+        let max = counter.innerHTML;
+        function updated() {
+            counter.innerHTML = ++init;
+            if (init == max) {
+                clearInterval(count);
+            }
+        }
+    })
 });
