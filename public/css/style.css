@@ -251,6 +251,19 @@ body {
     .product-cover {
         margin-bottom: 3rem;
     }
+
+    .btn-nav {
+        border-style: none;
+        line-height: inherit;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-nav:hover {
+        color: white;
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 769px) {
