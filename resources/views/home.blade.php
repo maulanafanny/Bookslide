@@ -34,7 +34,7 @@
     <h1 class="text-center fw-bold">Mengapa Memilih Bookslide?</h1>
     <br><br>
     <div class="row justify-content-center">
-        <div class="col-lg-3 col-sm-12 col-md-12 mb-3 me-5">
+        <div class="col-lg-3 col-sm-12 col-md-12 mb-3 offers-section">
             <h3 class="fw-semibold mb-4"><i class="bi bi-truck me-3 fs-3"></i>Pengiriman Gratis</h3>
             <p class="hero-text-small" style="color: black">
                 Bookslide menawarkan pengiriman gratis ke seluruh wilayah
@@ -43,7 +43,7 @@
                 Proses pengiriman cepat dan aman.
             </p>
         </div>
-        <div class="col-lg-3 col-sm-12 col-md-12 mb-3 me-5">
+        <div class="col-lg-3 col-sm-12 col-md-12 mb-3 offers-section">
             <h3 class="fw-semibold mb-4"><i class="bi bi-tags me-3 fs-3"></i>Diskon & Promo</h3>
             <p class="hero-text-small" style="color: black">
                 Dapatkan penawaran menarik dan promo terbatas dari kami.
@@ -52,7 +52,7 @@
                 yang diperbarui setiap hari.
             </p>
         </div>
-        <div class="col-lg-3 col-sm-12 col-md-12 mb-3 me-5">
+        <div class="col-lg-3 col-sm-12 col-md-12 mb-3">
             <h3 class="fw-semibold mb-4"><i class="bi bi-patch-check me-3 fs-3"></i></i>Kepuasan Terjamin</h3>
             <p class="hero-text-small" style="color: black">
                 Kami berharap Anda menyukai layanan pembelian buku kami. Tim 

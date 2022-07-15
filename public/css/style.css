@@ -231,7 +231,7 @@ body {
     width: 50%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .dashboard-card-icons {
         position: absolute;
         background-color: red;
@@ -253,7 +253,7 @@ body {
     }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 769px) {
     .dashboard-card-icons {
         position: absolute;
         background-color: red;
@@ -275,7 +275,7 @@ body {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
     .dashboard-card-icons {
         position: absolute;
         background-color: red;
@@ -290,5 +290,9 @@ body {
         border: 3px solid white;
         border-radius: 4px;
         padding: 15px;
+    }
+    
+    .offers-section {
+        margin-right: 3rem;
     }
 }
