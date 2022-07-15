@@ -73,12 +73,12 @@
 
 <div style="background-color: #f6f6f6; padding: 100px 0;">
 
-<div class="container-fluid" id="catalog">
+<div class="container-fluid text-center" id="catalog">
     <h1 class="text-center fw-bold">Katalog Kami</h2>
     <br>
     <section class="catalog-card-list">
         @foreach ($books as $book)
-            <a href="/product/{{ $book->id }}" class="catalog-card shadow text-decoration-none">
+            <a href="/product/{{ $book->id }}" class="catalog-card text-start shadow text-decoration-none">
                 <header class="catalog-card-header"  style="overflow: hidden">
                     <div class="mx-auto text-center">
                         <img src="{{ $book->cover }}" class="img-fluid p-3" style="height: 350px">
@@ -89,6 +89,10 @@
             </a>
         @endforeach
     </section>
+    <br>
+    <a href="/product" class="btn btn-grd px-4 py-2 shadow">
+        Lihat Selengkapnya
+    </a>
 </div>
 
 </div>
