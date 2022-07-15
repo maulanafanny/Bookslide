@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -168,7 +169,7 @@
 
                     <!-- Links -->
                     <h5 class="font-weight-light text-uppercase mt-3 mb-4">Hubungi Kami</h5>
-                    <p style="color: #ababab">Tertarik berlangganan cerita/artikel kami, yuk isi formulir di bawah</p>
+                    <p style="color: #ababab">Ada pertanyaan? Silahkan hubungi kami melalui kontak di bawah</p>
                     <ul class="list-unstyled">
                         <li class="row" style="color: #ababab">
                             <div class="col-sm-1">
@@ -208,7 +209,7 @@
         <br>
 
         <div class="footer-copyright text-center py-4"
-            style="background-color: #192027; color: #999; font-weight: 100;">
+            style="background-color: #192027; color: #999; font-weight: 100; font-size: 1rem">
             © Bookslide 2022. All rights reserved.
         </div>
 
