@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'books' => Book::paginate(8),
+            'books' => Book::inRandomOrder()->take(8)->get(),
             'route' => 'Home'
         ]);
     }

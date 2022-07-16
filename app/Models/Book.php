@@ -26,4 +26,18 @@ class Book extends Model
               ->orWhere('pengarang', 'like', '%' . request('search-products') . '%')
               ->orWhere('genre', 'like', '%' . request('search-products') . '%');
     }
+
+    public function scopeRelatedProducts($query, $book)
+    {
+        $genre = explode(",", $book->genre);
+
+        $query->whereNot('id', $book->id);
+
+        $query->where(function ($query) use ($book, $genre) {
+            $query->where('pengarang', 'like', '%' . $book->pengarang . '%')
+                  ->orWhere('genre', 'like', '%' . $genre[0] . '%');
+        });
+
+        $query->orderByRaw("FIELD(pengarang , '". $book->pengarang ."') DESC");
+    }
 }

@@ -51,5 +51,5 @@
         {{ $books->links('vendor.pagination.bootstrap-5') }}
     </div>
 </div>
-
+<br>
 @endsection

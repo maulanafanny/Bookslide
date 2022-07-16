@@ -73,7 +73,7 @@
 <div style="background-color: #f6f6f6; padding: 100px 0;">
 
 <div class="container-fluid text-center" id="catalog">
-    <h1 class="text-center fw-bold">Katalog Kami</h2>
+    <h1 class="text-center fw-bold">Katalog Kami</h1>
     <br>
     <section class="catalog-card-list">
         @foreach ($books as $book)

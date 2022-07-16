@@ -121,9 +121,12 @@ class BookController extends Controller
 
     function single($id)
     {
+        $book = Book::find($id);
+        
         return view('product', [
-            'book' => Book::find($id),
-            'route' => Book::find($id)->judul
+            'book' => $book,
+            'route' => $book->judul,
+            'books' => Book::relatedProducts($book)->take(4)->get()
         ]);
     }
 

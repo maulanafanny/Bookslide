@@ -18,7 +18,7 @@ use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('home', [
-        'books' => Book::paginate(8),
+        'books' => Book::inRandomOrder()->take(4)->get(),
         'route' => 'Home'
     ]);
 });

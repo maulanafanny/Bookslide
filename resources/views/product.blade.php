@@ -39,4 +39,37 @@
         </div>
     </div>
 </div>
+
+<br>
+
+<div style="background-color: #f6f6f6;">
+    <div class="container" id="catalog">
+        <br>
+        <br>
+        <br>
+        <h2 class="text-center fw-bold" style="font-size: 33px">Produk Terkait</h2>
+        <hr class="mx-auto" style="background-color: crimson; width: 12%;  border: none; height: 3px;">
+        <br>
+        <section class="card-deck row justify-content-center">
+            @foreach ($books as $book)
+                <a href="/product/{{ $book->id }}" class="product-card shadow text-decoration-none col-3 m-3">
+                    <header class="catalog-card-header" style="overflow: hidden; white-space: nowrap;">
+                        <div class="mx-auto text-center">
+                            <img src="{{ $book->cover }}" class="img-fluid mx-1 my-3 px-0" style="height: 300px">
+                        </div>
+                        <p class="mb-1">{{ $book->pengarang }}</p>
+                        <h2>{{ $book->judul }}</h2>
+                        <h6 class="fs-5 pe-5 fw-bold" style="display: inline-block;">
+                            Rp {{ number_format($book->harga,2,",",".") }}
+                        </h6>
+                    </header>
+                </a>
+            @endforeach
+        </section>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
 @endsection
