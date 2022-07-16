@@ -120,16 +120,16 @@
                     <h5 class="font-weight-light text-uppercase mt-3 mb-4">Rekan</h5>
                     <ul class="list-unstyled footer-text">
                         <li>
-                            <a href="#!" class="alink">Gramedia</a>
+                            <a href="https://www.gramedia.com" target="_blank" class="alink">Gramedia</a>
                         </li>
                         <li>
-                            <a href="#!" class="alink">BukaBuku</a>
+                            <a href="http://www.bukabuku.com" target="_blank" class="alink">BukaBuku</a>
                         </li>
                         <li>
-                            <a href="#!" class="alink">BukuKita</a>
+                            <a href="https://www.bukukita.com" target="_blank" class="alink">BukuKita</a>
                         </li>
                         <li>
-                            <a href="#!" class="alink">Togamas</a>
+                            <a href="https://togamas.com" target="_blank" class="alink">Togamas</a>
                         </li>
                     </ul>
 
@@ -184,7 +184,7 @@
                                 <i class="bi bi-envelope mr-3"></i>
                             </div>
                             <div class="col-sm-10">
-                                <p>Bookslide@gmail.co.id</p>
+                                <p>Bookslide@gmail.com</p>
                             </div>
                         </li>
                         <li class="row" style="color: #ababab">
