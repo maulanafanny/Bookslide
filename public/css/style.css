@@ -304,3 +304,28 @@ body {
         margin-right: 3rem;
     }
 }
+
+.btn-search {
+    border-color: #ced4da;
+}
+
+.btn-search:hover {
+    border-color:#ff8a00; 
+    background-size: 200%; 
+    background-image: var(--gradient);
+    color: white;
+}
+
+.btn-src {
+    background-image: var(--gradient);
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    background-size: 300%;
+    background-position: left;
+    transition: 0.5s;
+}
+
+.btn-src:hover {
+    background-position: right;
+}

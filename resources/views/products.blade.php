@@ -15,19 +15,21 @@
     </div>
 </div>
 
-{{-- <div class="container mb-5">
-    <div class="row">
-        <div class="col-md-auto px-0">
-            <button class="btn btn-danger p-3 shadow" style="border-radius: 10px 0 0 10px">Semua Acara</button>
+<div class="container">
+    <div class="row align-items-center justify-content-center mb-3">
+        <div class="col-8">
+            <form method="GET" action="/product" class="input-group shadow-sm">
+                <input type="text" name="search-products" class="form-control py-2" placeholder="Cari Produk, Judul Buku, Penulis, Genre" aria-label="Cari Produk, Judul Buku, Penulis, Genre" aria-describedby="button-addon2">
+                <button class="btn btn-outline btn-search" type="submit" id="button-addon2"><i class="bi bi-search fs-5"></i></button>
+            </form>
         </div>
-        <div class="col-md-auto px-0">
-            <button class="btn btn-light p-3 shadow" style="border-radius: 0 10px 10px 0">Acara Mendatang</button>
+        <div class="col-2">
+            <a href="/product" class="btn btn-src px-4 py-2 shadow-sm">
+                Reset Pencarian
+            </a>
         </div>
     </div>
-</div> --}}
-
-<!-- Cards -->
-<div class="container">
+    <br>
     <section class="card-deck row justify-content-center">
         @foreach ($books as $book)
             <a href="/product/{{ $book->id }}" class="product-card shadow text-decoration-none col-3 m-3">

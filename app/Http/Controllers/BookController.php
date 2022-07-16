@@ -111,10 +111,10 @@ class BookController extends Controller
         return redirect('/dashboard/books')->with('success', 'Berhasil menghapus data buku!');
     }
     
-    function product()
+    function product(Book $books)
     {
         return view('products', [
-            'books' => Book::paginate(12),
+            'books' => $books->filter()->paginate(12)->withQueryString(),
             'route' => 'Produk'
         ]);
     }
