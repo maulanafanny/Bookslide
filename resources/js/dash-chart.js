@@ -1,4 +1,5 @@
 import Chart from "chart.js/auto";
+import { toInteger } from "lodash";
 
 const books = document.getElementById('books').innerText;
 const users = document.getElementById('users').innerText;
@@ -31,6 +32,12 @@ const myChart = new Chart(ctx, {
         ],
     },
     options: {
+        animations: {
+            y: {
+                duration: 3000,
+                from: toInteger(sold)
+            }
+        },
         scales: {
             y: {
                 beginAtZero: true,
