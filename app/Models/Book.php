@@ -38,6 +38,6 @@ class Book extends Model
                   ->orWhere('genre', 'like', '%' . $genre[0] . '%');
         });
 
-        $query->orderByRaw("FIELD(pengarang , '". $book->pengarang ."') DESC");
+        $query->orderByRaw("FIELD(pengarang , '". $book->pengarang ."') DESC")->inRandomOrder();
     }
 }
