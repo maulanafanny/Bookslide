@@ -11,10 +11,6 @@ class DashboardController extends Controller
 {
     function index()
     {
-        if (Auth::guest()) {
-            return view('auth.login');
-        }
-
         return view('dashboard.index', [
             'books' => Book::count(),
             'users' => User::count()
