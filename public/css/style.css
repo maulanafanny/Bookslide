@@ -229,7 +229,7 @@ body {
     width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .dashboard-card-icons {
         position: absolute;
         width: 80px;
@@ -261,9 +261,13 @@ body {
         color: white;
         background-color: transparent;
     }
+
+    .search-input {
+        margin-bottom: 1.25rem;
+    }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .dashboard-card-icons {
         position: absolute;
         width: 80px;
@@ -328,4 +332,11 @@ body {
 
 .btn-src:hover {
     background-position: right;
+}
+
+.form-control:focus {
+    box-shadow: unset;
+    border-color: rgb(219, 215, 215);
+    background-color: white;
+    border-radius: 0.25rem 0.25rem 0.25rem 0;
 }

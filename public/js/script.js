@@ -39,4 +39,41 @@ $(document).ready(function(){
             }
         }
     })
+
+    // product livesearch
+    load_data();
+
+    function load_data(search) {
+        $.ajax({
+            url: "/livesearch",
+            method: "GET",
+            data: {
+                search: search
+            },
+            success: function (data) {
+                $('#result').html(data);
+            }
+        });
+    }
+    
+    $('#keyword').keyup(function (e) { 
+        query = $(this).val();
+        load_data(query);
+    });
+
+    $('#keyword').focus(function (e) { 
+        e.preventDefault();
+        $('#result').addClass('show');
+    });
+
+    $('#keyword').focusout(function (e) { 
+        e.preventDefault();
+        setTimeout(function () {
+            $('#result').removeClass('show');
+        }, 100)
+    });
+
+    $(".dropdown-menu").css({
+        'width': ($(".search-input").width() - 43 + 'px')
+    });
 });

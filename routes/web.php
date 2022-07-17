@@ -3,7 +3,6 @@
 use App\Models\Book;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,7 @@ use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('home', [
-        'books' => Book::inRandomOrder()->take(4)->get(),
+        'books' => Book::inRandomOrder()->take(8)->get(),
         'route' => 'Home'
     ]);
 });
@@ -30,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/product', [App\Http\Controllers\BookController::class, 'product'])->name('product');
 Route::get('/product/{products}', [App\Http\Controllers\BookController::class, 'single'])->name('single-product');
 
+Route::get('/livesearch', [App\Http\Controllers\BookController::class, 'livesearch'])->name('livesearch');
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/dashboard/books', function (Book $books) {

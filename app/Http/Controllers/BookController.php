@@ -130,4 +130,14 @@ class BookController extends Controller
         ]);
     }
 
+    function livesearch(Request $request, Book $book)
+    {
+        if ($request->ajax()) {
+            return view('livesearch', [
+                'request' => $request->search,
+                'judul' => $book->where('judul', 'like', '%' . $request->search . '%')->get()->take(10),
+                'pengarang' => $book->where('pengarang', 'like', '%' . $request->search . '%')->groupBy('pengarang')->get('pengarang')->take(2)
+            ]);
+        }
+    }
 }

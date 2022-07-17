@@ -17,14 +17,16 @@
 
 <div class="container">
     <div class="row align-items-center justify-content-center mb-3">
-        <div class="col-8">
-            <form method="GET" action="/product" class="input-group shadow-sm">
-                <input type="text" name="search-products" class="form-control py-2" placeholder="Cari Produk, Judul Buku, Penulis, Genre" aria-label="Cari Produk, Judul Buku, Penulis, Genre" aria-describedby="button-addon2">
+        <div class="col-lg-8 col-md-7 search-input">
+            <form autocomplete="off" method="GET" action="/product" class="input-group shadow-sm">
+                <input id="keyword" type="text" name="search-products" class="form-control py-2" placeholder="Cari Produk, Judul Buku, Penulis, Genre" aria-label="Cari Produk, Judul Buku, Penulis, Genre" aria-describedby="button-addon2">
                 <button class="btn btn-outline btn-search" type="submit" id="button-addon2"><i class="bi bi-search fs-5"></i></button>
             </form>
+            <ul id="result" class="dropdown-menu shadow-sm" style="border-radius: 0 0 0.25rem 0.25rem; border-top: transparent;">
+            </ul>
         </div>
-        <div class="col-2">
-            <a href="/product" class="btn btn-src px-4 py-2 shadow-sm">
+        <div class="col-lg-2 col-md-3">
+            <a href="/product" class="btn btn-src px-4 py-2 shadow-sm" style="min-width: 161.45px">
                 Reset Pencarian
             </a>
         </div>
