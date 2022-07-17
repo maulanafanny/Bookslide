@@ -70,7 +70,7 @@ $(document).ready(function(){
         e.preventDefault();
         setTimeout(function () {
             $('#result').removeClass('show');
-        }, 100)
+        }, 250)
     });
 
     $(".dropdown-menu").css({
