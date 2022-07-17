@@ -46,6 +46,8 @@
     </div>
 </section>
 
+@vite(['resources/js/dash-chart.js'])
+
 <div class="container m-5 mx-auto" style="width: 95%">
     <canvas id="dashChart"></canvas>
 </div>
