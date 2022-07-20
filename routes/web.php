@@ -3,7 +3,7 @@
 use App\Models\Book;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\{BookController, DashboardController, HomeController};
 
 /*
 |--------------------------------------------------------------------------
@@ -26,17 +26,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/product', [BookController::class, 'product'])->name('product');
-Route::get('/product/{products}', [App\Http\Controllers\BookController::class, 'single'])->name('single-product');
+Route::get('/product/{products}', [BookController::class, 'single'])->name('single-product');
 
-Route::get('/livesearch', [App\Http\Controllers\BookController::class, 'livesearch'])->name('livesearch');
+Route::get('/livesearch', [BookController::class, 'livesearch'])->name('livesearch');
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::get('/dashboard/books', function (Book $books) {
-    return view('dashboard.book', [
-        'books' => $books->all()
-    ]);
-})->name('dashboard-book')->middleware('auth');
-
+// Dashboard Routes
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard/books', [DashboardController::class, 'books'])->name('dashboard-book')->middleware('auth');
 Route::resource('/dashboard/book', BookController::class)->middleware('auth');

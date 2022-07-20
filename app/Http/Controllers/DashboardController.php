@@ -29,4 +29,10 @@ class DashboardController extends Controller
 			'books' => $book
 		]);
     }
+
+    function books(Book $books) {
+        return view('dashboard.book', [
+            'books' => $books->all()
+        ]);
+    }
 }
