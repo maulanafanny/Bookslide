@@ -73,7 +73,7 @@ $(document).ready(function(){
         }, 250)
     });
 
-    $(".dropdown-menu").css({
+    $("#result").css({
         'width': ($(".search-input").width() - 43 + 'px')
     });
 });

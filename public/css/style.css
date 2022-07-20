@@ -196,6 +196,14 @@ body {
     margin-top: 4px;
 }
 
+.breadcrumb-item:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item+.active:hover {
+    text-decoration: none;
+}
+
 .alink {
     color: #ababab;
     font-weight: 550;
@@ -228,6 +236,20 @@ body {
     margin-bottom: -57px;
     width: 50%;
 }
+
+.input-group-live {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.form-control-live {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+
 
 @media (max-width: 767px) {
     .dashboard-card-icons {
@@ -311,6 +333,8 @@ body {
 
 .btn-search {
     border-color: #ced4da;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .btn-search:hover {
@@ -338,5 +362,4 @@ body {
     box-shadow: unset;
     border-color: rgb(219, 215, 215);
     background-color: white;
-    border-radius: 0.25rem 0.25rem 0.25rem 0;
 }
