@@ -3,8 +3,10 @@
 @section('content')
     <script>
         $(document).ready(function() {
-            $(".main-nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
-            $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary");
+            $(".navbar > .container").addClass("align-items-end");
+            $(".main-nav").addClass("bg-light navbar-light shadow fs-5 fw-normal").removeClass("navbar-dark");
+            $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary mb-2");
+            $('.username').css('font-size', 'initial').css('font-weight', 'initial');
             $('#logo-brand').attr('src', '{{ asset('img/logo-dark.png') }}');
         });
     </script>
@@ -17,7 +19,7 @@
 
     <div class="container">
         <div class="row align-items-center justify-content-center mb-3">
-            <div class="col-lg-8 col-md-7 search-input">
+            <div class="col-lg-5 col-md-7 search-input" style="min-width: 350px">
                 <form autocomplete="off" method="GET" action="/product" class="input-group input-group-live shadow-sm">
                     <input id="keyword" type="text" name="search-products" class="form-control form-control-live py-2 px-3"
                         placeholder="Cari Produk, Judul Buku, Penulis, Genre"

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="hero">
-    <div class="container hero-text">
+    <div class="container hero-text" style="max-width: 1150px">
         <div class="row">
             <div class="col-lg-5 col-sm-12">
                 <h1 style="line-height: 50px">

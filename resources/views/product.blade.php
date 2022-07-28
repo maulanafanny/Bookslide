@@ -2,10 +2,12 @@
 
 @section('content')
 <script>
-    $(document).ready(function () {
-        $(".main-nav").addClass("bg-light navbar-light shadow").removeClass("navbar-dark");
-        $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary");
-        $('#logo-brand').attr('src', '{{ asset("img/logo-dark.png") }}');
+    $(document).ready(function() {
+        $(".navbar > .container").addClass("align-items-end");
+        $(".main-nav").addClass("bg-light navbar-light shadow fs-5 fw-normal").removeClass("navbar-dark");
+        $('.btn-nav').removeClass("btn-outline-light").addClass("btn-outline-secondary mb-2");
+        $('.username').css('font-size', 'initial').css('font-weight', 'initial');
+        $('#logo-brand').attr('src', '{{ asset('img/logo-dark.png') }}');
     });
 </script>
 

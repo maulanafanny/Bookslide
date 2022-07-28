@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,8 @@
 
     <title>
         {{ config('app.name', 'Laravel') }}
-        @if(!empty($route))
-            {{ ' | '.$route }}
+        @if (!empty($route))
+            {{ ' | ' . $route }}
         @endif
     </title>
 
@@ -22,53 +23,72 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark p-4 main-nav" style="z-index: 100">
+        <nav class="navbar navbar-expand-md navbar-dark p-4 main-nav" style="z-index: 100; width:100%">
             <div class="container">
+
+                {{-- Navbar Logo --}}
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset("img/logo-light.png") }}" height="50px" id="logo-brand">
+                    <img src="{{ asset('img/logo-light.png') }}" height="50px" id="logo-brand">
                 </a>
+
+                {{-- Button Collapse --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                {{-- Pages Navigation --}}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: initial">
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item btn btn-outline-light btn-nav me-3" id="btn-nav">
-                            <a href="{{ url('product') }}" class="nav-link">Produk</a>
+                    <ul class="navbar-nav px-2" id="nav-pages">
+                        <li class="nav-item px-2">
+                            <a href="/product" class="nav-link {{ Route::currentRouteName() == 'product' ? 'active' : '' }}">Produk</a>
                         </li>
-                        <li class="nav-item btn btn-outline-light btn-nav me-5" id="btn-nav">
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">Wishlist</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">Keranjang</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item px-2">
                             <a href="/dashboard" class="nav-link">Dashboard</a>
                         </li>
-                        <!-- Authentication Links -->
+                    </ul>
+
+                </div>
+
+                {{-- Authentication Navigation --}}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: initial">
+
+                    <ul class="navbar-nav">
                         @guest
+
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <li class="nav-item btn btn-outline-light btn-nav">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item btn btn-outline-light btn-nav ms-3">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle username" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -80,13 +100,16 @@
                             </li>
                         @endguest
                     </ul>
+                    
                 </div>
+
             </div>
         </nav>
+    </div>
 
-        <main class="pt-4">
-            @yield('content')
-        </main>
+    <main class="pt-4">
+        @yield('content')
+    </main>
     </div>
 
     <footer style="background-color: #262b30; color: white;">
@@ -103,8 +126,8 @@
                     <!-- Content -->
                     <h5 class="font-weight-bold text-uppercase mt-2 mb-4 fs-1 fw-bold">BOOKSLIDE</h5>
                     <p style="color: #ababab" class="footer-text">
-                        Bookslide menyediakan berbagai jenis buku untuk dibeli maupun disewa 
-                        di seluruh wilayah Indonesia. Kami bekerja sama dengan para penerbit 
+                        Bookslide menyediakan berbagai jenis buku untuk dibeli maupun disewa
+                        di seluruh wilayah Indonesia. Kami bekerja sama dengan para penerbit
                         secara langsung untuk memberi Anda pilihan buku terlengkap dan berkualitas.
                     </p>
 
@@ -208,12 +231,12 @@
 
         <br>
 
-        <div class="footer-copyright text-center py-4"
-            style="background-color: #192027; color: #999; font-weight: 100; font-size: 1rem">
+        <div class="footer-copyright text-center py-4" style="background-color: #192027; color: #999; font-weight: 100; font-size: 1rem">
             © Bookslide 2022. All rights reserved.
         </div>
 
     </footer>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
+
 </html>

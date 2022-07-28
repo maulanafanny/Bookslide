@@ -76,4 +76,10 @@ $(document).ready(function(){
     $("#result").css({
         'width': ($(".search-input").width() - 43 + 'px')
     });
+
+    window.onresize = function () {
+        $("#result").css({
+            'width': ($(".search-input").width() - 43 + 'px')
+        });    
+    }
 });
