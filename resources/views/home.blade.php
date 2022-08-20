@@ -19,7 +19,7 @@
                     Katalog Kami
                 </a>
             </div>
-            <img class="col-7 p-0 ps-5 mt-4 d-none d-lg-block hero-book" src="{{ asset('img/book-hero.png') }}">
+            <img class="col-7 p-0 ps-5 mt-5 d-none d-lg-block hero-book" src="{{ asset('img/book-hero.png') }}">
         </div>
     </div>
 </div>
